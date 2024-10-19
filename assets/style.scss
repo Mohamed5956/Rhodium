@@ -576,6 +576,62 @@ footer{
                     }
                 }
             }
+            .item{
+                margin-bottom: 20px;
+                .title{
+                    color: #F6F6F6;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin-left: 10px;
+                    }
+                }
+                .description{
+                    font-family: $font-family_2;
+                    color: #F6F6F6;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .subscribe{
+            h5{
+                color: #A31B1B;
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .subscribe-form{
+                width: 100%;
+                margin-top: 20px;
+                color: #fff;
+                &::placeholder{
+                    color: #D5D0CC;
+                }
+                .form-input{
+                    position: relative;
+                    .form-control{
+                        text-align: right;
+                        padding: 10px 20px;
+                        background-color: transparent;
+                        border: 1px solid $color_3;
+                        color: #fff;
+                        box-shadow: unset;
+                    }
+                    button{
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        color: #fff;
+                        background-color: $color_3;
+                        margin: unset;
+                        border-radius: 0px 30px 30px 0px;
+                    }
+                }
+            }
         }
     }
 }
