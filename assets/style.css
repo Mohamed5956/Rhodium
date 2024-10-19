@@ -542,6 +542,31 @@ footer .links-content .social-links .social-icons svg {
   height: 22px;
   fill: #fff;
 }
+footer .links-content .links {
+  margin-bottom: 15px;
+}
+footer .links-content .links h5 {
+  color: #DE2424;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+footer .links-content .links ul {
+  margin: 0;
+  padding: 0;
+}
+footer .links-content .links ul li {
+  margin-bottom: 10px;
+  padding: 0;
+  list-style-type: none;
+  color: #F6F6F6;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .links-content .links ul li a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .copy-right {
   background-color: #2B2724;
