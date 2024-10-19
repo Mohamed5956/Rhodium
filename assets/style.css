@@ -114,9 +114,13 @@ body .sec-head {
 .navbar .cart .cart-cont .cart-price .total-price {
   color: #DE2424;
 }
+.navbar .navbar-toggler {
+  border: 0;
+  padding: 0;
+}
 
 .navbar-brand img {
-  width: 150px;
+  width: 90px;
 }
 
 .navbar-nav .nav-link {
@@ -202,12 +206,26 @@ body .sec-head {
   margin-bottom: 15px;
 }
 .category-section .item .img {
+  position: relative;
   margin: auto;
   width: 100px;
   height: 100px;
   overflow: hidden;
   border-radius: 50%;
   box-shadow: inset 0 4px 4px -1px rgba(12, 12, 13, 0.05);
+  background-image: url("images/category-1-bg.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+.category-section .item .img img {
+  transition: all 0.3s ease;
+  height: 80px;
+  object-fit: contain;
+}
+.category-section .item .img:hover img {
+  height: 100%;
 }
 .category-section .item .cont {
   margin-top: 10px;
@@ -234,7 +252,18 @@ body .sec-head {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 10px;
+  position: relative;
+}
+.top-seller-section .item .img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Start with opacity 0 */
+}
+.top-seller-section .item .img img:first-child {
+  opacity: 1; /* The first image starts fully visible */
 }
 .top-seller-section .item .title {
   font-family: "Noor", sans-serif;
@@ -276,6 +305,7 @@ body .sec-head {
   margin-bottom: 20px;
 }
 .top-seller-section .item .item-tag {
+  z-index: 9;
   border-radius: 16px 16px 0 16px;
   position: absolute;
   right: 0;

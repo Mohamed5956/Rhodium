@@ -123,10 +123,14 @@ body {
             }
         }
     }
+    .navbar-toggler{
+        border: 0;
+        padding: 0;
+    }
 }
 .navbar-brand {
 	img {
-		width: 150px;
+		width: 90px
 	}
 }
 .navbar-nav {
@@ -210,12 +214,29 @@ body {
     .item{
         margin-bottom: 15px;
         .img{
+            position: relative;
             margin: auto;
             width: 100px;
             height: 100px;
             overflow: hidden;
             border-radius: 50%;
             box-shadow: inset 0 4px 4px -1px rgba(12, 12, 13, 0.05);
+            background-image: url('images/category-1-bg.png');
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: end;
+            img{
+                transition: all 0.3s ease;
+                height: 80px;
+                object-fit: contain;
+                // transform: scale(0.5);
+            }
+            &:hover{
+                img{
+                    height: 100%;
+                }
+            }
         }
         .cont{
             margin-top: 10px;
@@ -236,12 +257,25 @@ body {
         background-color: #F6F6F6;
         border-radius: 15px;
         margin-bottom: 30px;
-        .img{
+        .img {
             height: 150px;
             width: 100%;
             border-radius: 10px;
             overflow: hidden;
-            margin-bottom: 10px;
+            position: relative;
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: opacity 0.3s ease;
+                opacity: 0; /* Start with opacity 0 */
+            }
+
+            img:first-child {
+                opacity: 1; /* The first image starts fully visible */
+            }
         }
         .title{
             font-family: $font-family_2;
@@ -283,6 +317,7 @@ body {
             margin-bottom: 20px;
         }
         .item-tag{
+            z-index: 9;
             border-radius: 16px 16px 0 16px;
             position: absolute;
             right: 0;
