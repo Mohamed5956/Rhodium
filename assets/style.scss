@@ -349,19 +349,22 @@ body {
             overflow: hidden;
         }
         .item{
+            transition: all 0.3s;
             position: relative;
             overflow: hidden;
             padding: 8px;
             background-color: #F6F6F6;
             border-radius: 15px;
             margin-bottom: 30px;
+            &:hover{
+                box-shadow: 4px 4px 10px #0004;
+            }
             .img {
                 height: 150px;
                 width: 100%;
                 border-radius: 10px;
                 overflow: hidden;
                 position: relative;
-    
                 img {
                     position: absolute;
                     width: 100%;
@@ -369,8 +372,7 @@ body {
                     object-fit: contain;
                     transition: opacity 0.3s ease;
                     opacity: 0; /* Start with opacity 0 */
-                }
-    
+                }    
                 img:first-child {
                     opacity: 1; /* The first image starts fully visible */
                 }
@@ -413,6 +415,36 @@ body {
                 background-color: #14AE5C;
                 color: #fff;
                 margin-bottom: 20px;
+            }
+            .quantity-selector {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                padding: 5px 35px;
+                button{
+                    border: 0;
+                    background-color: transparent;
+                    margin: 0;
+                    color: #fff;
+                    font-size: 18px; /* Size of + and - icons */
+                    cursor: pointer;
+                }
+                input{
+                    width: 50px; /* Adjust width for a better fit */
+                    color: #fff;
+                    text-align: center;
+                    padding: 5px 0;
+                    margin: 0 10px;
+                    border: 0;
+                    background-color: transparent;
+                    font-size: 16px; /* Ensure input font size matches */
+                    appearance: textfield; /* Remove number input arrows in some browsers */
+                    -moz-appearance: textfield; /* Remove arrows in Firefox */
+                    &::-webkit-scrollbar {
+                        display: none; /* Hide scrollbars */
+                    }
+                }
             }
             .item-tag{
                 z-index: 9;
@@ -471,6 +503,7 @@ body {
     }
 }
 .ads-section{
+    padding-bottom: 120px;
     .ads-wrapper{
         position: relative;
         display: flex;
