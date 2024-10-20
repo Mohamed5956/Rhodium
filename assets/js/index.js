@@ -50,4 +50,47 @@ $(document).ready(function() {
             }
         }
     });
+    var swiper = new Swiper('.hero-section .hero-slider .slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        speed: 1500,
+        autoplay: {
+            delay: 5000,
+        },
+        loop: true,
+        mousewheel: true,
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all 'Add to Cart' buttons
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the default behavior of the anchor tag
+
+            // Get the parent item container
+            const itemContainer = button.closest('.item');
+
+            // Show the quantity selector
+            const quantitySelector = itemContainer.querySelector('.quantity-selector');
+            quantitySelector.style.display = 'inline-flex';
+
+            // Handle the quantity increase/decrease
+            const quantityInput = quantitySelector.querySelector('.quantity-input');
+            const plusButton = quantitySelector.querySelector('.plus');
+            const minusButton = quantitySelector.querySelector('.minus');
+
+            plusButton.addEventListener('click', function () {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            });
+
+            minusButton.addEventListener('click', function () {
+                if (quantityInput.value > 1) {
+                    quantityInput.value = parseInt(quantityInput.value) - 1;
+                }
+            });
+        });
+    });
 });
