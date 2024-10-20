@@ -337,7 +337,7 @@ body {
             background-color: #1466E1;
         }
         &:hover{
-            box-shadow: 4px 4px 10px #0004;
+            box-shadow: 4px 4px 10px #0002;
         }
     }
 }
@@ -357,7 +357,7 @@ body {
             border-radius: 15px;
             margin-bottom: 30px;
             &:hover{
-                box-shadow: 4px 4px 10px #0004;
+                box-shadow: 4px 4px 10px #0002;
             }
             .img {
                 height: 150px;
@@ -509,6 +509,7 @@ body {
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
+        gap: 20px;
         .ad-box{
             height: 230px;
             border-radius: 24px;
@@ -733,7 +734,12 @@ footer{
         }
     }
     .ads-section {
-
+        .ads-wrapper{
+            flex-wrap: wrap;
+            .ad-box{
+                width: 100%;
+            }
+        }
     }
     
     .top-footer{

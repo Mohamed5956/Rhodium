@@ -325,7 +325,7 @@ body .sec-head {
   background-color: #1466E1;
 }
 .top-seller-section .item:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2666666667);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1333333333);
 }
 
 .recently-section {
@@ -347,7 +347,7 @@ body .sec-head {
   margin-bottom: 30px;
 }
 .recently-section .products-slider .item:hover {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2666666667);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1333333333);
 }
 .recently-section .products-slider .item .img {
   height: 150px;
@@ -499,6 +499,7 @@ body .sec-head {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  gap: 20px;
 }
 .ads-section .ads-wrapper .ad-box {
   height: 230px;
@@ -714,6 +715,12 @@ footer .links-content .subscribe .subscribe-form .form-input button {
   }
   .recently-section .products-slider .swiper-button-prev {
     left: 0;
+  }
+  .ads-section .ads-wrapper {
+    flex-wrap: wrap;
+  }
+  .ads-section .ads-wrapper .ad-box {
+    width: 100%;
   }
   .top-footer::after {
     height: 18%;
