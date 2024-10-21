@@ -40,6 +40,16 @@
                                 <i class="fas fa-search"></i>
                             </button>
                         </form>
+                        <div class="d-lg-block d-none dropdown">
+                            <div class="language-dropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="selected-language">العربية</span>
+                                <span class="caret"></span>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">العربية</a>
+                                <a class="dropdown-item" href="#">الانجليزية</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 order-lg-3 order-1">
@@ -67,7 +77,20 @@
                         </a>
                         <a href="#" class="me-3 cart-cont d-none d-lg-flex">
                             <span>عربة التسوق</span>
-                            <span class="cart-price"><span class="total-price">0.00</span><span class="currency">ر.ع</span></span>
+                            <div class="cart-price">
+                                <span class="total-price">0.00</span>
+                                <div class="dropdown currency-dropdown">
+                                    <div class="currency-selector" id="currencyMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="selected-currency">ر.ع</span>
+                                        <span class="caret"></span>
+                                    </div>
+                                    <div class="dropdown-menu" aria-labelledby="currencyMenuButton">
+                                        <span class="dropdown-item" href="#">ر.ع</span>
+                                        <span class="dropdown-item" href="#">ر.س</span>
+                                        <span class="dropdown-item" href="#">د.ك</span>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -177,8 +200,8 @@
     <section class="top-seller-section">
         <div class="container">
             <h3 class="sec-head">الأكثر مبيعا</h3>
-            <div class="row">
-                <div class="col">
+            <div class="prodcuts d-flex gap-5">
+                <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag out-of-stock-tag">نفذ من المخزون</span>
                         <div class="img">
@@ -201,7 +224,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag gift-tag"> + هدية مجانية </span>
                         <div class="img">
@@ -224,7 +247,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag runway-tag"> قارب النفاد </span>
                         <div class="img">
@@ -247,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag top-seller-tag"> الأكثر مبيعآ </span>
                         <div class="img">
@@ -270,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag delivery-tag">توصيل مجاني</span>
                         <div class="img">

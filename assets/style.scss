@@ -126,6 +126,71 @@ body {
         border: 0;
         padding: 0;
     }
+    .language-dropdown {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 20px;
+        border: 1px solid #ccc; /* Add a border if needed */
+        border-radius: 4px; /* Rounded corners */
+        .selected-language {
+            margin-right: 8px;
+        }
+        .caret {
+            margin-right: 10px;
+            border: solid black; /* Customize the caret color */
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+        }       
+        .dropdown-menu {
+            display: none; /* Hidden by default */
+        }
+        &:hover{
+            .dropdown-menu,
+            .dropdown-menu:hover {
+                display: block; /* Show on hover */
+            }
+        } 
+        .dropdown-item {
+            padding: 8px 12px; /* Adjust padding */
+            cursor: pointer;
+            &:hover{
+                :hover {
+                    background-color: #e9ecef; /* Hover background color */
+                }
+            }
+        }
+    }
+    .currency-dropdown{
+        display: inline-block;
+        .currency-selector {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .selected-currency {
+                margin-right: 8px;
+            }
+            .dropdown-menu {
+                display: none; /* Hidden by default */
+            }
+            &:hover{
+                .dropdown-menu,
+                .dropdown-menu:hover {
+                    display: block; /* Show on hover */
+                }
+            } 
+            .dropdown-item {
+                padding: 8px 12px; /* Adjust padding */
+                cursor: pointer;
+                &:hover {
+                    background-color: #e9ecef; /* Hover background color */
+                }
+            }
+        }
+    }
 }
 .navbar-brand {
 	img {
@@ -214,6 +279,9 @@ body {
 }
 .top-seller-section{
     padding-bottom: 120px;
+    .prodcuts{
+
+    }
     .item{
         position: relative;
         overflow: hidden;
@@ -704,13 +772,17 @@ footer{
 		}
 	}
 	.hero-section {
-        .btn{
-            margin-top: 30px;
-        }
-        .img{
-            margin-top: 50px;
+        .hero-slider{
+            .item{
+                height: 250px;
+            }
         }
 	}
+    .top-seller-section{
+        .prodcuts{
+            flex-wrap: wrap;
+        }
+    }
     br{
         display: none;
     }

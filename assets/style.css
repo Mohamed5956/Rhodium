@@ -117,6 +117,65 @@ body .sec-head {
   border: 0;
   padding: 0;
 }
+.navbar .language-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #ccc; /* Add a border if needed */
+  border-radius: 4px; /* Rounded corners */
+}
+.navbar .language-dropdown .selected-language {
+  margin-right: 8px;
+}
+.navbar .language-dropdown .caret {
+  margin-right: 10px;
+  border: solid black; /* Customize the caret color */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+.navbar .language-dropdown .dropdown-menu {
+  display: none; /* Hidden by default */
+}
+.navbar .language-dropdown:hover .dropdown-menu,
+.navbar .language-dropdown:hover .dropdown-menu:hover {
+  display: block; /* Show on hover */
+}
+.navbar .language-dropdown .dropdown-item {
+  padding: 8px 12px; /* Adjust padding */
+  cursor: pointer;
+}
+.navbar .language-dropdown .dropdown-item:hover :hover {
+  background-color: #e9ecef; /* Hover background color */
+}
+.navbar .currency-dropdown {
+  display: inline-block;
+}
+.navbar .currency-dropdown .currency-selector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .currency-dropdown .currency-selector .selected-currency {
+  margin-right: 8px;
+}
+.navbar .currency-dropdown .currency-selector .dropdown-menu {
+  display: none; /* Hidden by default */
+}
+.navbar .currency-dropdown .currency-selector:hover .dropdown-menu,
+.navbar .currency-dropdown .currency-selector:hover .dropdown-menu:hover {
+  display: block; /* Show on hover */
+}
+.navbar .currency-dropdown .currency-selector .dropdown-item {
+  padding: 8px 12px; /* Adjust padding */
+  cursor: pointer;
+}
+.navbar .currency-dropdown .currency-selector .dropdown-item:hover {
+  background-color: #e9ecef; /* Hover background color */
+}
 
 .navbar-brand img {
   width: 90px;
@@ -692,11 +751,11 @@ footer .links-content .subscribe .subscribe-form .form-input button {
   .navbar .d-flex {
     justify-content: flex-start;
   }
-  .hero-section .btn {
-    margin-top: 30px;
+  .hero-section .hero-slider .item {
+    height: 250px;
   }
-  .hero-section .img {
-    margin-top: 50px;
+  .top-seller-section .prodcuts {
+    flex-wrap: wrap;
   }
   br {
     display: none;

@@ -94,3 +94,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.getElementById('dropdownMenuButton').addEventListener('click', function() {
+    const menu = this.nextElementSibling;
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
+document.getElementById('currencyMenuButton').addEventListener('click', function() {
+    const menu = this.nextElementSibling;
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
