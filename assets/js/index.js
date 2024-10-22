@@ -103,3 +103,22 @@ document.getElementById('currencyMenuButton').addEventListener('click', function
     const menu = this.nextElementSibling;
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
+// When the menu toggle button is clicked, open the side menu
+$(".menu-toggle-btn").on("click", function () {
+    $(".sidemenu").css({
+        "transform": "translateY(0)",
+        "opacity": "1",
+        "visibility": "visible"
+    });
+    $(".sidemenu").addClass("open");
+});
+
+// When the close button is clicked, close the side menu
+$(".clss").on("click", function () {
+    $(".sidemenu").css({
+        "transform": "translateY(-100%)",
+        "opacity": "0",
+        "visibility": "hidden"
+    });
+    $(".sidemenu").removeClass("open");
+});
