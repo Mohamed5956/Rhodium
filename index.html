@@ -23,6 +23,40 @@
 <body>
     <div class="sidemenu">
         <div class="main-links">
+            <div class="header-links">
+                <div class="dropdown">
+                    <div class="language-dropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="selected-language">العربية</span>
+                        <span class="caret"></span>
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">العربية</a>
+                        <a class="dropdown-item" href="#">الانجليزية</a>
+                    </div>
+                </div>
+                <div class="cart">
+                    <a href="#" class="me-3 cart-icon">
+                        <i class="fas fa-shopping-cart"></i> <span class="count">0</span>
+                    </a>
+                    <a href="#" class="me-3 cart-cont d-flex">
+                        <span>عربة التسوق</span>
+                        <div class="cart-price">
+                            <span class="total-price">0.00</span>
+                            <div class="dropdown currency-dropdown">
+                                <div class="currency-selector" id="currencyMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="selected-currency">ر.ع</span>
+                                    <span class="caret"></span>
+                                </div>
+                                <div class="dropdown-menu" aria-labelledby="currencyMenuButton">
+                                    <span class="dropdown-item" href="#">ر.ع</span>
+                                    <span class="dropdown-item" href="#">ر.س</span>
+                                    <span class="dropdown-item" href="#">د.ك</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <ul>
                 <li> <a href="#0" class="main-link">  التخفيضات </a> </li>
                 <li><a href="#0" class="main-link"> تواصل معنا  </a></li>
@@ -37,7 +71,8 @@
                 <!-- Logo -->
                 <div class="col-lg-2 order-lg-1 order-2">
                     <a class="navbar-brand" href="#">
-                        <img src="assets/images/logo.png" alt="Rhodium Projects">
+                        <img src="assets/images/logo.png" alt="Rhodium Projects" class="d-lg-block d-none">
+                        <img src="assets/images/logo-white.svg" alt="Rhodium Projects" class="d-lg-none d-block">
                     </a>
                 </div>
                 <div class="col-lg-4 d-lg-block d-none order-lg-2">
@@ -118,12 +153,14 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="item">
-                            <img src="assets/images/hero.png" alt="hero-img" class="img-cover">
+                            <img src="assets/images/hero.png" alt="hero-img" class="d-lg-block d-none img-cover">
+                            <img src="assets/images/responsive-slide.png" alt="hero-img" class="d-lg-none d-block img-cover">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="item">
-                            <img src="assets/images/hero1.png" alt="hero-img" class="img-cover">
+                            <img src="assets/images/hero1.png" alt="hero-img" class="d-lg-block d-none img-cover">
+                            <img src="assets/images/responsive-slide.png" alt="hero-img" class="d-lg-none d-block img-cover">
                         </div>
                     </div>
                 </div>
@@ -133,79 +170,79 @@
     <!-- category section -->
     <section class="category-section">
         <div class="container">
-            <div class="categories row justify-content-between align-items-center">
-                <div class="col item">
+            <div class="categories text-white gap-5 flex-wrap d-flex align-items-center">
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 1" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 6" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 7" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 8" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 9" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 10" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 10" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 10" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
-                <div class="col item">
+                </a>
+                <a class="item" href="#0">
                     <div class="img">
                         <img src="assets/images/category-1.png" alt="Category 10" class="img-cover">
                     </div>
                     <div class="cont text-center">
                         <h6>العناية بالشعر</h6>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -213,7 +250,7 @@
     <section class="top-seller-section">
         <div class="container">
             <h3 class="sec-head">الأكثر مبيعا</h3>
-            <div class="prodcuts d-flex gap-5">
+            <div class="prodcuts row">
                 <div class="card-wrapper">
                     <div class="item">
                         <span class="item-tag out-of-stock-tag">نفذ من المخزون</span>
