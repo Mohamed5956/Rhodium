@@ -20,36 +20,65 @@ $(document).ready(function() {
         $images.css('opacity', 0); // Hide all images
         $images.first().css('opacity', 1); // Show the first image again
     });
-    var swiper = new Swiper('.recently-section .products-slider .slider', {
-        slidesPerView: 5,
-        spaceBetween: 24,
-        speed: 1500,
-        navigation: {
-            nextEl: '.products-slider .swiper-button-next',
-            prevEl: '.products-slider .swiper-button-prev',
-        },
-        autoplay: {
-            delay: 5000,
-        },
-        loop: true,
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
+    // var swiper = new Swiper('.recently-section .products-slider .slider', {
+    //     slidesPerView: 5,
+    //     spaceBetween: 24,
+    //     speed: 1500,
+    //     navigation: {
+    //         nextEl: '.products-slider .swiper-button-next',
+    //         prevEl: '.products-slider .swiper-button-prev',
+    //     },
+    //     autoplay: {
+    //         delay: 5000,
+    //     },
+    //     loop: true,
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 1,
+    //         },
+    //         480: {
+    //             slidesPerView: 2,
+    //         },
+    //         787: {
+    //             slidesPerView: 3,
+    //         },
+    //         991: {
+    //             slidesPerView: 3,
+    //         },
+    //         1200: {
+    //             slidesPerView: 5,
+    //         }
+    //     }
+    // });
+    // Select all slider containers
+    document.querySelectorAll('.products-slider').forEach((sliderContainer, index) => {
+        // Add unique navigation classes for each slider
+        let nextButton = sliderContainer.querySelector('.swiper-button-next');
+        let prevButton = sliderContainer.querySelector('.swiper-button-prev');
+
+        // Initialize Swiper for each slider container
+        new Swiper(sliderContainer.querySelector('.slider'), {
+            slidesPerView: 5,
+            spaceBetween: 24,
+            speed: 1500,
+            navigation: {
+                nextEl: nextButton,
+                prevEl: prevButton,
             },
-            480: {
-                slidesPerView: 2,
+            autoplay: {
+                delay: 5000,
             },
-            787: {
-                slidesPerView: 3,
-            },
-            991: {
-                slidesPerView: 3,
-            },
-            1200: {
-                slidesPerView: 5,
+            loop: true,
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                480: { slidesPerView: 2 },
+                787: { slidesPerView: 3 },
+                991: { slidesPerView: 3 },
+                1200: { slidesPerView: 5 },
             }
-        }
+        });
     });
+
     var swiper = new Swiper('.hero-section .hero-slider .slider', {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -58,7 +87,6 @@ $(document).ready(function() {
             delay: 5000,
         },
         loop: true,
-        mousewheel: true,
     });
 });
 
